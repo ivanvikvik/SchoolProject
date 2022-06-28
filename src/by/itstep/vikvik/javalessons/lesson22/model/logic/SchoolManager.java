@@ -50,9 +50,3 @@ public class SchoolManager {
     }
 
 }
-
-class Test {
-    public static void main(String[] args) {
-
-    }
-}

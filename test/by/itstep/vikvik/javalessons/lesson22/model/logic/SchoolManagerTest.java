@@ -2,17 +2,19 @@ package by.itstep.vikvik.javalessons.lesson22.model.logic;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 public class SchoolManagerTest {
 
-    private int[][] groups;
+    private static int[][] groups;
 
-    @Before
-    public void init() {
-        System.out.println("@Before");
+    public SchoolManagerTest(){
+        System.out.println("SchoolManagerTest constructor");
+    }
+
+    @BeforeClass
+    public static void init(){
+        System.out.println(" @BeforeClass");
         groups = new int[][]{
                 {7, 7, 8, 2},
                 {9, 8, 9, 10},
@@ -21,22 +23,40 @@ public class SchoolManagerTest {
         };
     }
 
-    @After
-    public void destroy(){
-        System.out.println("@After");
+    @AfterClass
+    public static void destroy(){
+        System.out.println("@AfterClass");
         groups = null;
     }
 
-    @Before
-    public void init1() {
-        System.out.println("@Before");
-    }
+//    @Before
+//    public void init() {
+//        System.out.println("@Before");
+//        groups = new int[][]{
+//                {7, 7, 8, 2},
+//                {9, 8, 9, 10},
+//                {7, 7, 1},
+//                {8, 8, 10, 10}
+//        };
+//    }
+//
+//    @After
+//    public void destroy(){
+//        System.out.println("@After");
+//        groups = null;
+//    }
+//
+//    @Before
+//    public void init1() {
+//        System.out.println("@Before");
+//    }
+//
+//    @Before
+//    public void init2() {
+//        System.out.println("@Before");
+//    }
 
-    @Before
-    public void init2() {
-        System.out.println("@Before");
-    }
-
+    @Ignore
     @Test
     public void testCalculateAvgMarkPositive() {
         System.out.println("testCalculateAvgMarkPositive");
